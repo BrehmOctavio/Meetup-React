@@ -1,0 +1,23 @@
+* {
+  box-sizing: border-box;
+}
+
+.div-error {
+  height: auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 8rem;
+}
+.div-error .error-image {
+  height: 25rem;
+  width: auto;
+}
+.div-error .page-error {
+  font-size: 1rem;
+  font-family: sans-serif;
+  font-weight: lighter;
+  color: brown;
+}/*# sourceMappingURL=errorPage.css.map */

@@ -1,0 +1,24 @@
+* {
+  box-sizing: border-box;
+}
+
+.div-favorite {
+  height: auto;
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.div-favorite .number {
+  margin: 0.2rem;
+  font-size: 1.3rem;
+  font-family: sans-serif;
+  font-weight: lighter;
+  padding: 0.2rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-radius: 11px;
+  font-size: 1.3rem;
+  background-color: rgb(221, 0, 96);
+  color: rgb(255, 255, 255);
+}/*# sourceMappingURL=favoriteText.css.map */

@@ -1,0 +1,65 @@
+* {
+  box-sizing: border-box;
+}
+
+.div-layout {
+  height: auto;
+  width: 600px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 5rem;
+}
+.div-layout .title {
+  width: 100%;
+  text-align: start;
+  font-size: 2rem;
+  font-family: sans-serif;
+  font-weight: bolder;
+  color: rgb(0, 0, 0);
+}
+.div-layout .div-btns {
+  height: auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.div-layout .div-btns .no-favorite {
+  text-align: start;
+  font-size: 0.9rem;
+  font-family: sans-serif;
+  font-weight: lighter;
+  color: brown;
+}
+.div-layout .div-btns .clear-favorite {
+  width: auto;
+  border: none;
+  background-color: transparent;
+  text-align: start;
+  font-size: 0.9rem;
+  font-family: sans-serif;
+  font-weight: lighter;
+  color: brown;
+  margin-bottom: 3rem;
+}
+.div-layout .div-btns .clear-favorite:hover {
+  cursor: pointer;
+  color: rgb(147, 118, 118);
+}
+@media (max-width: 650px) {
+  .div-layout .div-layout {
+    width: 100%;
+    padding: 2rem;
+  }
+  .div-layout .div-btns {
+    justify-content: center;
+  }
+}
+@media (max-width: 1000px) {
+  .div-layout .title {
+    text-align: center;
+  }
+}/*# sourceMappingURL=Layout.css.map */
