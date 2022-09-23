@@ -1,0 +1,83 @@
+Ejercicio 1: Software para gestionar el streaming de películas online
+
+Solución:
+La solución a este problema es transformar un atributo (en este caso el atributo: Price) en un histórico, hacemos uso del patrón Asociación Histórica.  Se debe extraer el atributo como una asociación.
+Por lo tanto, solo se debe tener un precio por tipo de servicio (StreamingPrice – DownloadPrice). El contenido puede modificar el precio, pero solo en determinado momento. 
+Una vez que tenemos el siguiente Timestamp el precio actual pasa a ser Histórico.
+El contenido multimedia no debe tener los precios de dichos servicios al mismo tiempo. Ya que existen dos asociaciones (StreamingPrice – DownloadPrice), cada una representa un precio distinto, por ende, uno deja de ser válido cuando se utiliza otro servicio. 
+
+
+Recreación del diagrama:
+
+MultimediaContent
+-title: string
+-duration: minute
+-adult: boolean
+-size: integer
+
+
+Timestamp
+-timestamp: Timestamp
+
+
+Price
+-value: float
++getValue(): float
+
+
+StramingPrice
+
+Siendo StreamingPrice el conector de: MultimediaContent - Timestamp- Price
+
+-----------------------------------------------------------------------------------------------------------------------
+
+Recreación de las Clase: 
+Se implementan varias..
+
+
+class RegisterUser{
+  constructor(service=[]){
+    this.service = service;
+  }
+  getTotal(){
+    let total = 0;
+    this.service.forEach(service =>{
+      total += service.getServiceFee();
+      return total;
+    })
+  }
+}
+
+class Service{
+  constructor(multimediaContent){
+    this.multimediaContent = multimediaContent;
+  }
+  getServiceFee(){
+    return getspecificPrice() + content.getAdditionalCharges();
+  }
+  getSpecificPrice();
+}
+
+class Streaming extends Service{
+  getSpecificPrice(){
+    return content.StreamingPrice();
+  }
+}
+
+class DownloadService extends Service{
+  getSpecificPrice(){
+    return content.downloadPrice();
+  }
+}
+
+class MultimediaContent{
+  getAdditionalCharges(){
+    return 0;
+  }
+}
+
+class PremiumContent extends MultimediaContent{
+  getAdditionalCharges(){
+     return additionalFee;
+  }
+}
